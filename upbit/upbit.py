@@ -72,7 +72,7 @@ class Upbit(object):
                         'count': count}
         return self.__api_query(path='candles/months', method='get', query_params=query_params)
 
-    def get_trading_history(self, market, to='', count=1, cursor=0):
+    def get_trading_history(self, market, to='', count=1, cursor=''):
         query_params = {'market': market,
                         'to': to,
                         'count': count,
