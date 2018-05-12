@@ -16,20 +16,21 @@ Installation
 ------------
 
 ```
-pip install python-upbit
+pip install upbit
 ```
 
 Usage
 -----
 
 ```
->>> from upbit.upbit import Upbit
+>>> from upbit import Upbit
 >>> my_upbit = Upbit(None, None)
 >>> my_upbit.get_markets()
 [{'market': 'KRW-BTC', 'korean_name': '비트코인', 'english_name': 'Bitcoin'}, {'market': 'KRW-DASH', 'korean_name': '대시', 'english_name': 'Dash'}, {'market': 'KRW-ETH', 'korean_name': '이더리움', 'english_name': 'Ethereum'}, {'market': 'BTC-NEO', 'korean_name': '네오', 'english_name': 'NEO'}, ...
 ```
 
 ```
+>>> from upbit import Upbit
 >>> my_upbit = Upbit('access_key', 'secret_key')
 >>> my_upbit.get_assets()
 [{'currency': 'KRW', 'balance': '0.59953986', 'locked': '0.0', 'avg_krw_buy_price': '0', 'modified': False}, {'currency': 'BTC', 'balance': ...
