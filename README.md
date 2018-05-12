@@ -1,7 +1,7 @@
 python-upbit
 ============
 
-This is an unofficial Python wrapper for the Upbit API. I am not affiliated with Upbit. Please use at your own risk.
+This is an unofficial Python wrapper for the Upbit REST API. I am not affiliated with Upbit. Please use at your own risk.
 
 Donation
 --------
@@ -22,14 +22,14 @@ pip install upbit
 Usage
 -----
 
-```
+```python
 >>> from upbit import Upbit
 >>> my_upbit = Upbit(None, None)
 >>> my_upbit.get_markets()
 [{'market': 'KRW-BTC', 'korean_name': '비트코인', 'english_name': 'Bitcoin'}, {'market': 'KRW-DASH', 'korean_name': '대시', 'english_name': 'Dash'}, {'market': 'KRW-ETH', 'korean_name': '이더리움', 'english_name': 'Ethereum'}, {'market': 'BTC-NEO', 'korean_name': '네오', 'english_name': 'NEO'}, ...
 ```
 
-```
+```python
 >>> from upbit import Upbit
 >>> my_upbit = Upbit('access_key', 'secret_key')
 >>> my_upbit.get_assets()
