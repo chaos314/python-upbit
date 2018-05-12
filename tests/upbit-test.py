@@ -1,7 +1,7 @@
 import unittest
 import time
 import json
-from upbit.upbit import Upbit
+from upbit import Upbit
 
 MARKET = 'KRW-BTC'
 CURRENCY = 'BTC'
@@ -20,7 +20,6 @@ class TestUpbitQuotationAPI(unittest.TestCase):
         self.upbit = Upbit(None, None)
 
     def tearDown(self):
-        #time.sleep(5.0)
         pass
 
     def test_has_neither_access_key_nor_secret_key(self):
@@ -72,7 +71,9 @@ class TestUpbitQuotationAPI(unittest.TestCase):
         self.assertEqual(len(actual), count, 'the candle count is wrong.')
 
     def test_get_trading_history(self):
-        pass
+        actual = self.upbit.get_trading_history(MARKET)
+        test_basic_api_response(self, actual, 'get_trading_history')
+        self.assertGreater(len(actual), 0, 'the trading history is wrong.')
 
     def test_get_ticker(self):
         markets = '{0:s}, BTC-ETH, KRW-STORM'.format(MARKET)
